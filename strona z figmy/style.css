@@ -1,0 +1,117 @@
+body{
+    overflow: hidden;
+}
+html{
+    background-color: #1C6170;
+}
+#container{
+    background-color: #1C6170;
+    color: #1C6170;
+    margin: 1%;
+}
+#container * {
+    font-weight: bold;
+}
+#main_header{
+    background-color: #1C6170;
+    display: grid;
+    font-size: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "header header empty"
+    "header header section";    
+}
+main{
+    background-color: #144C64;
+    border-radius: 2rem;
+}
+#home{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #144C64;
+    font-size: 3rem;
+    margin: 0%;
+    display: grid;
+    grid-area: header;
+    place-content: center;
+    border-radius: 22px;
+    border-top-right-radius: 0;
+}
+aside{
+    display: grid;
+    grid-area: empty;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #144C64;
+    user-select: none;
+    border-radius: 22px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    place-content: center;
+}
+.icons_divs{
+    display: flex;
+    margin: 2% 10% 2% 10%;
+    padding: 2%;
+    background-color: #144C64;
+    color: #1C6170;
+    border-radius: 1rem;
+}
+main{
+    background-color: #144C64;
+    border-radius: 22px;
+    margin-top: 0.2%;
+    padding: 1%;
+}
+article{
+    background-color: #1C6170;
+    border-radius: 22px;
+    margin: 1%;
+    display: flex;
+    flex-direction: row;
+}
+#box{
+    background-color: #144C64;
+    display: flex;
+    flex-direction: column;
+}
+img{
+    border-radius: 25px;
+    margin: 0.2%;
+}
+nav{
+    display: flex;
+    grid-area: section;
+    background-color: #1C6170;
+    flex-direction: row;
+    border-radius: 10px;
+    justify-content: center;
+}
+li{
+    margin: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-right: 15%;
+}
+a{
+    text-decoration: none;
+    color: #1C6170;
+}
+textarea, input{
+    outline: none;
+    border: hidden;
+    background-color: #1C6170;
+    resize: none;
+    caret-color: #022f43;
+    color: #144C64;
+    font-size: 30px;
+    text-shadow: 2px 2px 6px #308599;
+    border-radius: 22px;
+    margin: 0.5%;
+}
