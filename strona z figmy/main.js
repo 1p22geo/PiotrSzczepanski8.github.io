@@ -1,5 +1,9 @@
 let isLogged = 0;
 const messages = document.getElementById("messages");
+const main = document.querySelector("main");
+function showPointer(){
+main.style.cursor = "pointer";
+}
 function showMessages(){
     if(isLogged == 1){
         messages.style.display = "";
@@ -10,10 +14,6 @@ function showMessages(){
         document.querySelector("main > p").style.justifyContent = "center";
         document.querySelector("main > p").style.fontSize = "2rem";
         document.querySelector("main > p").style.fontFamily = "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif";
-        const main = document.querySelector("main");
-        main.addEventListener("mouseover", function(){
-        main.style.cursor = "pointer";
-        });
     }
 }
 
@@ -57,11 +57,5 @@ form.addEventListener('submit', function(event) {
     document.getElementById("container2").style.display = "none";
     document.getElementById("container").style.display = "";
     p.remove();
-    main.removeEventListener("mouseover", function(){
-        main.style.cursor = "pointer";
-    });
-    window.addEventListener("mouseover", function(){
-        window.style.cursor = "default";
-    })
     main.onclick = "null";
 });
