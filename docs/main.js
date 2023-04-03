@@ -1,4 +1,5 @@
 let isLogged = 0;
+let signStatus = "in";
 const messages = document.getElementById("messages");
 const main = document.querySelector("main");
 function showPointer(){
@@ -59,3 +60,21 @@ form.addEventListener('submit', function(event) {
     p.remove();
     main.onclick = "null";
 });
+const sign = document.getElementById("signUpIn");
+sign.addEventListener("mouseover", function(){
+    sign.style.cursor = "pointer";
+})
+const submit = document.getElementById("submit");
+const signChoice = document.getElementById("signUpIn");
+const siteTitle = document.querySelector("#container2 > #main_header > #home > p");
+sign.addEventListener("click", function (){
+    if(signStatus == "in"){
+      submit.value = "SIGN UP";
+      signChoice.textContent = "Already have an account? SIGN IN";
+      signStatus = "up";
+    } else if(signStatus == "up"){
+      submit.value = "SIGN IN";
+      signChoice.textContent = "New to X-MAIL? SIGN UP";
+
+    }
+})

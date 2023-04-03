@@ -184,6 +184,7 @@ label{
 }
 #submit{
     color:#2B9CB4;
+    cursor: pointer;
 
 }
 #showPassword{
@@ -236,4 +237,7 @@ label{
 #messages::-webkit-scrollbar-thumb {
   background-color: #2B9CB4;
   border-radius: 1em;
+}
+#signUpIn{
+    margin-left: 3%;
 }
