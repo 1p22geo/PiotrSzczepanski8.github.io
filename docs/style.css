@@ -12,7 +12,7 @@ html{
 #container, #container2 * {
     font-weight: bold;
 }
-#main_header{
+.main_header{
     background-color: #2B9CB4;
     display: grid;
     font-size: 2rem;

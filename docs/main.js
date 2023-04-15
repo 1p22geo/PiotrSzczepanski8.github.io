@@ -50,7 +50,7 @@ accountPSWInput.addEventListener("input", validateForm);
 emailInput.addEventListener("input", validateForm);
 
 const form = document.querySelector('#logging_form');
-const p = document.querySelector('main > p')
+const p = document.querySelector('main > #messagesBlock')
 form.addEventListener('submit', function(event) {
     event.preventDefault();
     isLogged = 1;
@@ -77,4 +77,8 @@ sign.addEventListener("click", function (){
       signChoice.textContent = "New to X-MAIL? SIGN UP";
 
     }
+})
+const close1 = document.querySelector(".close");
+close1.addEventListener("click", function(){
+  location.reload();
 })
