@@ -75,7 +75,7 @@ sign.addEventListener("click", function (){
     } else if(signStatus == "up"){
       submit.value = "SIGN IN";
       signChoice.textContent = "New to X-MAIL? SIGN UP";
-
+      signStatus = "in";
     }
 })
 const close1 = document.querySelector(".close");

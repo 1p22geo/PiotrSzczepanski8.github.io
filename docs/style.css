@@ -75,6 +75,7 @@ article{
     border-radius: 22px;
     margin: 1%;
     color: #1D6B8D;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #box{
     background-color: #1D6B8D;
@@ -258,13 +259,16 @@ svg{
     color: #2B9CB4;
     flex-direction: row;
     border-radius: 22px;
+    position: sticky;
+    bottom: 0;
+    z-index: 999;
 }
 .other > a{
     color: #2B9CB4;
 }
 .other *{
-    margin-right: 10%;
-    margin-left: 10%;
+    margin-right: 20%;
+    margin-left: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -310,4 +314,11 @@ table{
 }
 td, th{
     border: 1px solid#9b00ce;
+}
+article > h3 > a{
+    color: #216e80;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+p{
+    user-select: none;
 }
