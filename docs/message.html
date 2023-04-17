@@ -9,6 +9,33 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div id="container">
+        <header class="main_header">
+            <header id="home">
+                <p>
+                    <i class="icon-user">&nbsp;</i>
+                MESSAGE
+                </p>
+            </header>
+            <aside>
+                X-MAIL
+            </aside>
+                <nav>
+                    <ul>
+                        <li><div class="icons_divs"><a href="create.html"><i class="icon-pencil"></i></a></div></li>
+                        <li><div class="icons_divs"><a href="index.html"><i class="icon-bell-alt"></i></a></div></li>
+                        <li><div class="icons_divs" onclick="toLogging()"><i class="icon-user"></i></div></li>
+                    </ul>
+                </nav>
+        </header>
+        <main>
+            <div id="messageContainer">
+                <!-- miejsce na wiadomoćś -->
+            </div>
+            <button id="markAndClose">MARK AS READ AND CLOSE</button>
+            <button>FORWARD</button>
+        </main>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>

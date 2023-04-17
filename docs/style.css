@@ -262,6 +262,8 @@ svg{
 }
 .other > a{
     color: #2B9CB4;
+    display: flex;
+    align-items: center;
 }
 .other *{
     margin-right: 10%;
@@ -316,4 +318,11 @@ article > h3 > a{
 }
 p{
     user-select: none;
+}
+button{
+    background-color: #095c5e;
+    border: #2B9CB4;
+    color: aqua;
+    cursor: pointer;
+    margin-right: 7%;
 }

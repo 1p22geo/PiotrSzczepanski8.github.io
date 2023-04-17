@@ -46,12 +46,16 @@ function validateForm() {
     submitBtn.disabled = true;
   }
 }
-accountPSWInput.addEventListener("input", validateForm);
-emailInput.addEventListener("input", validateForm);
+if(accountPSWInput){
+  accountPSWInput.addEventListener("input", validateForm);
+  emailInput.addEventListener("input", validateForm);
+}
+
 
 const form = document.querySelector('#logging_form');
 const p = document.querySelector('main > #messagesBlock')
-form.addEventListener('submit', function(event) {
+if(form){
+  form.addEventListener('submit', function(event) {
     event.preventDefault();
     isLogged = 1;
     showMessages();
@@ -59,15 +63,19 @@ form.addEventListener('submit', function(event) {
     document.getElementById("container").style.display = "";
     p.remove();
     main.onclick = "null";
-});
+  });
+}
+
 const sign = document.getElementById("signUpIn");
-sign.addEventListener("mouseover", function(){
-    sign.style.cursor = "pointer";
-})
 const submit = document.getElementById("submit");
 const signChoice = document.getElementById("signUpIn");
 const siteTitle = document.querySelector("#container2 > #main_header > #home > p");
-sign.addEventListener("click", function (){
+
+if(sign){
+  sign.addEventListener("mouseover", function(){
+    sign.style.cursor = "pointer";
+  })
+  sign.addEventListener("click", function (){
     if(signStatus == "in"){
       submit.value = "SIGN UP";
       signChoice.textContent = "Already have an account? SIGN IN";
@@ -77,11 +85,48 @@ sign.addEventListener("click", function (){
       signChoice.textContent = "New to X-MAIL? SIGN UP";
       signStatus = "in";
     }
-})
+  })
+}
+
 const close1 = document.querySelector(".close");
-close1.addEventListener("click", function(){
+if(close1){
+  close1.addEventListener("click", function(){
   location.reload();
-})
+  })
+}
+
+const messageContainer = document.getElementById("messageContainer");
+const article = document.querySelectorAll("article");
+
+if(article){
+  article.forEach(function(article){
+    article.addEventListener('click', openMessage) 
+  })
+}
+
+
+function openMessage(){
+  let articleId = this.getAttribute("id");
+  let articleContent = document.getElementById(articleId).innerHTML;
+  window.open('message.html?articleId=' + encodeURIComponent(articleId) + '&articleContent=' + encodeURIComponent(articleContent), '_blank');
+}
+
+const params = new URLSearchParams(window.location.search);
+const articleContent = params.get('articleContent');
+if(articleContent){
+  console.log(articleContent);
+  messageContainer.innerHTML = articleContent;
+}
+const closeButton = document.getElementById("markAndClose");
+if(closeButton){
+  closeButton.addEventListener("click", function(){
+    window.close();
+  })
+}
+
+
+
+
 // function openNewWindow() {
 //   const newWindow = window.open("about:blank", "_blank", "width=500,height=500");
 //   const newContent = "<html><head><title>Nowa Strona</title></head><body><div id='newContent'></div></body></html>";
