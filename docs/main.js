@@ -124,9 +124,6 @@ if(closeButton){
   })
 }
 
-
-
-
 // function openNewWindow() {
 //   const newWindow = window.open("about:blank", "_blank", "width=500,height=500");
 //   const newContent = "<html><head><title>Nowa Strona</title></head><body><div id='newContent'></div></body></html>";
