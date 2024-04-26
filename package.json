@@ -1,6 +1,6 @@
 {
   "name": "PiotrSzczepanski8.github.io",
-  "packageManager": "yarn@4.1.1",
+  "packageManager": "npm",
   "dependencies": {
     "express": "^4.19.2"
   },
